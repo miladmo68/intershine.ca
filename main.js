@@ -74,6 +74,7 @@
   function openMenu() {
     hamburger.classList.add('open');
     navMenu.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
     menuOverlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
   }
@@ -81,9 +82,17 @@
   function closeMenu() {
     hamburger.classList.remove('open');
     navMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
     menuOverlay.style.display = 'none';
     document.body.style.overflow = '';
   }
+
+  // Close menu on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navMenu && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
 
   if (hamburger && navMenu) {
     createOverlay();
@@ -444,25 +453,78 @@
 
       setLoading(true);
 
-      fetch(bookingForm.action || '../api.php', {
+      // Build a plain object so the server receives JSON. Multi-value
+      // checkbox names (days) are collected into an array.
+      var fd = new FormData(bookingForm);
+      var payload = {};
+      fd.forEach(function (value, key) {
+        if (key.endsWith('[]')) key = key.slice(0, -2);
+        if (Object.prototype.hasOwnProperty.call(payload, key)) {
+          if (!Array.isArray(payload[key])) payload[key] = [payload[key]];
+          payload[key].push(value);
+        } else {
+          payload[key] = value;
+        }
+      });
+      // Ensure `days` is always an array (FormData omits unchecked boxes)
+      var allDays = [];
+      bookingForm.querySelectorAll('input[name="days"]:checked').forEach(function (el) {
+        allDays.push(el.value);
+      });
+      payload.days = allDays;
+
+      var endpoint = bookingForm.getAttribute('action') || '/api/booking';
+
+      fetch(endpoint, {
         method: 'POST',
-        body: new FormData(bookingForm)
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       })
       .then(function (response) {
-        if (!response.ok) throw new Error('HTTP\u00a0' + response.status);
-        return response.text();
+        return response.json().catch(function () { return {}; }).then(function (data) {
+          return { ok: response.ok, status: response.status, data: data };
+        });
       })
-      .then(function () {
+      .then(function (result) {
         setLoading(false);
-        bookingForm.style.display = 'none';
-        successOverlay.classList.add('visible');
-        successOverlay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        if (result.ok && result.data && result.data.success) {
+          // Only clear/hide the form on confirmed success
+          bookingForm.reset();
+          bookingForm.style.display = 'none';
+          successOverlay.classList.add('visible');
+          successOverlay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
+        }
+
+        // Field-level errors from the server (HTTP 422)
+        if (result.status === 422 && result.data && result.data.errors) {
+          var firstField = null;
+          Object.keys(result.data.errors).forEach(function (name) {
+            var field = bookingForm.querySelector('[name="' + name + '"]');
+            if (field) {
+              fieldError(field, result.data.errors[name]);
+              if (!firstField) firstField = field;
+            }
+          });
+          if (firstField) firstField.focus();
+          showError(result.data.message || 'Please correct the highlighted fields.');
+          return;
+        }
+
+        showError(
+          (result.data && result.data.message) ||
+          'Something went wrong submitting your request. Please try again or call us directly.'
+        );
       })
       .catch(function () {
         setLoading(false);
         showError(
-          'Something went wrong submitting your request. ' +
-          'Please try again or call us directly at \u202F+1\u00a0(647)\u00a0835\u20113937.'
+          'We could not reach our booking service. ' +
+          'Please check your connection and try again, or call us directly.'
         );
       });
     });
@@ -527,5 +589,35 @@
   scrollTopBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // ============================================================
+  // MOBILE STICKY CTA — hide when booking form / footer in view
+  // ============================================================
+  var mobileCta = qs('#mobileCta');
+  if (mobileCta) {
+    document.body.classList.add('has-mobile-cta');
+
+    var hideTargets = [qs('#booking'), qs('#contact')].filter(Boolean);
+
+    if ('IntersectionObserver' in window && hideTargets.length) {
+      var visibleCount = 0;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) visibleCount++;
+          else visibleCount = Math.max(0, visibleCount - 1);
+        });
+        if (visibleCount > 0) mobileCta.classList.add('is-hidden');
+        else                  mobileCta.classList.remove('is-hidden');
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+
+      hideTargets.forEach(function (el) { io.observe(el); });
+    }
+  }
+
+  // ============================================================
+  // AUTO YEAR (footer)
+  // ============================================================
+  var yearEl = qs('#year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 })();

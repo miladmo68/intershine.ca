@@ -3,549 +3,824 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Intershine - Professional Cleaning Services in GTA. Residential, Commercial, Deep Cleaning, Move In/Out, Post-Construction, Carpet Cleaning and more.">
-  <meta name="keywords" content="cleaning, services, Intershine, intershine.ca, dust, new home, construction, renovation, clean">
-  <title>Intershine - Professional Cleaning Services in GTA</title>
+  <meta name="theme-color" content="#0E7C9C">
+
+  <title>Intershine Cleaning Services | Residential & Commercial Cleaning in Toronto & GTA</title>
+  <meta name="description" content="Professional residential and commercial cleaning across Toronto and the Greater Toronto Area. Move-in/out, deep cleaning, post-construction, and more. Fast, free quotes.">
+  <meta name="keywords" content="cleaning services Toronto, cleaning services GTA, residential cleaning Toronto, commercial cleaning Toronto, move-in cleaning, move-out cleaning, post-construction cleaning, deep cleaning, AirBnB cleaning, condo cleaning">
+  <link rel="canonical" href="https://intershine.ca/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Intershine Cleaning Services">
+  <meta property="og:title" content="Intershine Cleaning Services | Toronto & GTA">
+  <meta property="og:description" content="Professional residential and commercial cleaning across Toronto and the GTA. Detail-focused, flexible scheduling, fast free quotes.">
+  <meta property="og:url" content="https://intershine.ca/">
+  <meta property="og:image" content="https://intershine.ca/assets/hero1.jpg">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Intershine Cleaning Services | Toronto & GTA">
+  <meta name="twitter:description" content="Professional residential and commercial cleaning across Toronto and the GTA.">
+  <meta name="twitter:image" content="https://intershine.ca/assets/hero1.jpg">
+
   <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Preload LCP -->
+  <link rel="preload" as="image" href="assets/hero1.jpg" fetchpriority="high">
+
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Local Business JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CleaningService",
+    "name": "Intershine Cleaning Services",
+    "image": "https://intershine.ca/assets/logo.png",
+    "url": "https://intershine.ca/",
+    "telephone": "+1-647-835-3937",
+    "email": "info@intershine.ca",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "L4P",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Toronto" },
+      { "@type": "AdministrativeArea", "name": "Greater Toronto Area" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/intershine_inc"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cleaning Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Move In & Out Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deep Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Post-Construction Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpet Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AirBnB Cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Building Cleaning" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- ==================== INFO BAR ==================== -->
-  <div class="info-bar">
-    <div class="info-bar-inner">
-      <div class="info-item">
-        <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        <span>Toronto, GTA, Canada L4P</span>
+  <div class="topbar" role="complementary" aria-label="Contact information">
+    <div class="topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Serving Toronto &amp; the GTA
+        </span>
       </div>
-      <div class="info-item hide-sm">
-        <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        <a href="tel:+16478353937">+1 (647) 835-3937</a>
-      </div>
-      <div class="info-item hide-sm">
-        <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <a href="mailto:info@intershine.ca">info@intershine.ca</a>
+      <div class="topbar__right">
+        <a class="topbar__item" href="tel:+16478353937">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +1 (647) 835-3937
+        </a>
+        <a class="topbar__item topbar__item--email" href="mailto:info@intershine.ca">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          info@intershine.ca
+        </a>
       </div>
     </div>
   </div>
 
   <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <div class="nav-logo">
-        <a href="#home">
-          <img src="assets/logo.png" alt="Intershine Logo">
-        </a>
-      </div>
+  <nav class="navbar" id="navbar" aria-label="Primary">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__logo" aria-label="Intershine — home">
+        <img src="assets/logo.png" alt="Intershine" width="132" height="40">
+      </a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About us</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Packages</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#booking">Booking</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="nav-actions">
-        <a href="tel:+16478353937" class="nav-phone" title="Call Intershine">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        </a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="navbar__actions">
+        <a href="#booking" class="btn btn--primary btn--sm hide-mobile">Get a Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero" id="home">
-    <div class="hero-slider" id="heroSlider">
-      <div class="slide active" style="background-image: url('assets/hero1.jpg');"></div>
-      <div class="slide" style="background-image: url('assets/hero2.jpg');"></div>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h3 class="hero-sub"><span class="color-bg-text">Professional. Affordable. Reliable.</span></h3>
-      <h2 class="hero-title"><span class="color-bg-text">Cleaning Service Provider in GTA</span></h2>
-      <a href="#about" class="hero-arrow" aria-label="Scroll down">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 18" fill="currentColor"><path d="M15 18L0 0h30z"/></svg>
-      </a>
-    </div>
-    <div class="hero-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- ==================== ABOUT SECTION ==================== -->
-  <section class="section section-white" id="about">
-    <div class="container">
-      <h2 class="section-title">About us</h2>
-      <div class="section-divider"></div>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" id="heroSlider" aria-hidden="true">
+        <div class="slide active" style="background-image: url('assets/hero1.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/hero2.jpg');"></div>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
 
-      <div class="about-grid">
-        <div class="about-text">
-          <p>At Intershine, we are dedicated to providing top-tier cleaning services that combine reliability, professionalism, and affordability. Our mission is to ensure that every space we maintain not only looks immaculate but also promotes a healthy and safe environment for everyone. Choose Intershine for a cleaning service you can trust. Let us help you maintain a pristine and welcoming space, so you can focus on what matters most.</p>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Toronto &amp; GTA Cleaning Specialists</span>
+          <h1 class="hero__title">Spotless spaces, <span class="accent">every visit.</span></h1>
+          <p class="hero__sub">Reliable residential and commercial cleaning across Toronto and the Greater Toronto Area. Detail-focused work, flexible scheduling, and transparent pricing — without the hassle.</p>
 
-          <div class="features-grid">
+          <div class="hero__ctas">
+            <a href="#booking" class="btn btn--primary btn--lg">Get a Free Quote</a>
+            <a href="tel:+16478353937" class="btn btn--ghost btn--lg" aria-label="Call Intershine at +1 647 835 3937">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              Call (647) 835-3937
+            </a>
+          </div>
 
-            <div class="feature-box">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-              </div>
-              <div class="feature-content">
-                <h3>Fair Prices</h3>
-                <p>We believe in offering our clients the best value for their money. Our competitive pricing structure ensures that you receive premium cleaning services without breaking the bank. We're committed to transparency, with no hidden fees or surprise charges.</p>
-              </div>
-            </div>
+          <ul class="hero__trust" aria-label="Why choose Intershine">
+            <li>Residential &amp; Commercial</li>
+            <li>Move-In &amp; Move-Out</li>
+            <li>Post-Construction</li>
+            <li>Flexible Scheduling</li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="feature-box">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-              </div>
-              <div class="feature-content">
-                <h3>Certification</h3>
-                <p>We hold industry-recognized certifications that demonstrate our commitment to quality and safety. Our adherence to strict standards ensures that every job is done right the first time, with the utmost care for your property and environment.</p>
-              </div>
-            </div>
+      <div class="hero-dots" aria-label="Hero image controls">
+        <button class="dot active" data-index="0" aria-label="Show hero image 1"></button>
+        <button class="dot" data-index="1" aria-label="Show hero image 2"></button>
+      </div>
+    </section>
 
-            <div class="feature-box">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-              </div>
-              <div class="feature-content">
-                <h3>Professional Staff</h3>
-                <p>Our team is our greatest asset. Each member of our staff is thoroughly trained, certified, and committed to delivering the highest standards of cleanliness. We take pride in our work and strive to exceed your expectations every time.</p>
-              </div>
-            </div>
-
-            <div class="feature-box">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              </div>
-              <div class="feature-content">
-                <h3>Reliable</h3>
-                <p>Count on us to show up on time, every time. Our reliable service means you can trust us to maintain your space consistently and thoroughly. We build long-term relationships with our clients based on trust and dependability.</p>
-              </div>
-            </div>
-
+    <!-- ==================== TRUST STRIP ==================== -->
+    <section class="trust-strip" aria-label="At a glance">
+      <div class="trust-strip__inner container">
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="trust-item__text">
+            <h3>Toronto &amp; GTA</h3>
+            <p>Local team across the Greater Toronto Area</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="trust-item__text">
+            <h3>Detail-Focused</h3>
+            <p>Thorough, careful cleaning every time</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>
+          </div>
+          <div class="trust-item__text">
+            <h3>Flexible Scheduling</h3>
+            <p>One-time, weekly, or biweekly visits</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2.05v2.02C16.39 4.59 19 7.51 19 11c0 .9-.18 1.75-.5 2.54l1.73 1.01C20.71 13.4 21 12.23 21 11c0-4.49-3.36-8.19-7.71-8.94L13 2.05zM10.99 2.05C5.91 2.55 2 6.81 2 12c0 5.52 4.47 10 9.99 10C16.5 22 20.21 19 21.41 14.95l-1.86-.7c-.97 3.13-3.83 5.41-7.27 5.41-4.21 0-7.62-3.41-7.62-7.62 0-3.94 2.99-7.17 6.83-7.58V2.05H10.99z"/><path d="M12 7v5l4.28 2.54.72-1.21-3.5-2.08V7H12z"/></svg>
+          </div>
+          <div class="trust-item__text">
+            <h3>Fast Quotes</h3>
+            <p>Same-day response to your request</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== HOW WE WORK SECTION ==================== -->
-  <section class="section section-bg how-we-work" id="how-we-work" style="background-image: url('assets/how-we-work-bg.jpg');">
-    <div class="how-overlay"></div>
-    <div class="container how-content">
-      <h2 class="section-title light">How we work</h2>
-
-      <div class="steps-grid">
-        <div class="step-box">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM17.99 9l-1.41-1.42-6.59 6.59-2.58-2.57-1.42 1.41 4 3.99z"/></svg>
-          </div>
-          <div class="step-content">
-            <h3>Choose Your Plan</h3>
-            <p>Select the cleaning package that best suits your needs. Whether it's a one-time deep clean or regular maintenance, we have a plan tailored just for you.</p>
-          </div>
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section section--white" id="about">
+      <div class="container">
+        <div class="about-head">
+          <span class="eyebrow">About Intershine</span>
+          <h2 class="section-title">Cleaning you can rely on.</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">At Intershine, we provide reliable, detail-focused cleaning services across Toronto and the GTA — for homes, offices, condos, and rental properties. Our goal is simple: leave every space spotless, every time, with friendly service and transparent pricing.</p>
         </div>
 
-        <div class="step-box">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+            </div>
+            <div class="feature-content">
+              <h3>Fair Pricing</h3>
+              <p>Transparent quotes with no hidden fees or surprise charges — just honest pricing for honest work.</p>
+            </div>
           </div>
-          <div class="step-content">
-            <h3>Book a Date</h3>
-            <p>Use our easy booking form to schedule your cleaning at a time that's convenient for you. We offer flexible scheduling to fit your busy lifestyle.</p>
-          </div>
-        </div>
 
-        <div class="step-box">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="feature-content">
+              <h3>Detail-Focused</h3>
+              <p>We sweat the small stuff so you don't have to. Every corner, edge, and surface gets the attention it deserves.</p>
+            </div>
           </div>
-          <div class="step-content">
-            <h3>We Clean</h3>
-            <p>Our professional team arrives on time and gets to work, delivering a spotless clean that meets our high standards and exceeds your expectations.</p>
-          </div>
-        </div>
 
-        <div class="step-box">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div class="feature-content">
+              <h3>Friendly Team</h3>
+              <p>Our staff is trained, courteous, and respects your space. We treat every job like it's our own home.</p>
+            </div>
           </div>
-          <div class="step-content">
-            <h3>You Enjoy</h3>
-            <p>Sit back, relax, and enjoy your fresh, pristine space. With our reliable services, your satisfaction is always guaranteed.</p>
+
+          <div class="feature-box">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div class="feature-content">
+              <h3>Reliable</h3>
+              <p>On time, every time. We show up when we say we will and finish what we start — consistently.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== SERVICES SECTION ==================== -->
-  <section class="section section-white" id="services">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <div class="section-divider"></div>
-      <p class="section-intro">At Intershine, we offer a full spectrum of cleaning services designed to meet the diverse needs of our clients. Whether it's maintaining the cleanliness of your home with our residential services, ensuring your business spaces are spotless with our commercial cleaning, or preparing properties for new occupants through our move-in/move-out cleaning, we've got you covered. We specialize in deep cleaning for a thorough refresh, as well as renovation and post-construction cleaning to eliminate dust and debris. Our carpet cleaning service revitalizes your flooring, while our dedicated team is also equipped to handle building cleaning for condos and vacation rentals like Airbnb. Whatever your cleaning needs, we deliver exceptional results every time.</p>
+    <!-- ==================== HOW WE WORK ==================== -->
+    <section class="section" id="how-we-work">
+      <div class="container">
+        <div class="about-head">
+          <span class="eyebrow">Our Process</span>
+          <h2 class="section-title">How it works.</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">Booking a clean with Intershine is simple — four short steps from quote to spotless space.</p>
+        </div>
 
-      <div class="services-grid">
-
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <div class="steps-grid">
+          <div class="step-box">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM10 17l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Choose your service</h3>
+              <p>Pick a package or one-off cleaning that fits your space and schedule.</p>
+            </div>
           </div>
-          <h3>Residential Cleaning</h3>
-        </a>
 
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+          <div class="step-box">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Book a date</h3>
+              <p>Send us a quick request — we'll confirm a time that works for you.</p>
+            </div>
           </div>
-          <h3>Commercial Cleaning</h3>
-        </a>
 
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          <div class="step-box">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 13-3-3 1.41-1.41L11 12.17l4.59-4.59L17 9l-6 6z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>We clean</h3>
+              <p>Our team arrives prepared, on time, and ready to deliver a thorough clean.</p>
+            </div>
           </div>
-          <h3>Move In &amp; Out Cleaning</h3>
-        </a>
 
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.07 4.93l-1.41 1.41C19.1 7.79 20 9.79 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8c0-4.08 3.05-7.44 7-7.93V6.5l4-4-4-4v2.05C5.05 1.06 1 6.08 1 12c0 6.08 4.92 11 11 11s11-4.92 11-11c0-3.03-1.23-5.79-3.21-7.77z"/></svg>
+          <div class="step-box">
+            <div class="step-number">4</div>
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Enjoy your space</h3>
+              <p>Relax, exhale, and enjoy a fresh, spotless home or workspace.</p>
+            </div>
           </div>
-          <h3>Deep Cleaning</h3>
-        </a>
-
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2.05V4.05C17.39 4.59 20.5 8.58 19.96 12.97C19.5 16.61 16.64 19.5 13 19.93V21.93C18.5 21.38 22.5 16.5 21.95 11C21.5 6.25 17.73 2.5 13 2.05M11 2.06C9.05 2.25 7.19 3 5.67 4.26L7.1 5.74C8.22 4.84 9.57 4.26 11 4.06V2.06M4.26 5.67C3 7.19 2.25 9.04 2.05 11H4.05C4.24 9.58 4.8 8.23 5.69 7.1L4.26 5.67M2.06 13C2.26 14.96 3.03 16.81 4.27 18.33L5.69 16.9C4.81 15.77 4.24 14.42 4.06 13H2.06M7.1 18.37L5.67 19.74C7.18 21 9.04 21.79 11 22V20C9.58 19.82 8.23 19.25 7.1 18.37M12 7L8 11H11V17H13V11H16L12 7Z"/></svg>
-          </div>
-          <h3>Renovation Cleaning</h3>
-        </a>
-
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-          <h3>Post-Construction Cleaning</h3>
-        </a>
-
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
-          </div>
-          <h3>Carpet Cleaning</h3>
-        </a>
-
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
-          </div>
-          <h3>AirBnB Cleaning</h3>
-        </a>
-
-        <a href="#booking" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zm-6 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm4 4h-2v-2h2v2zm0-4h-2V9h2v2z"/></svg>
-          </div>
-          <h3>Building Cleaning</h3>
-        </a>
-
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== PRICING SECTION ==================== -->
-  <section class="section" id="pricing">
-    <div class="pricing-oval"></div>
-    <div class="container">
-      <h2 class="section-title">Explore Our Packages</h2>
-      <div class="section-divider"></div>
+    <!-- ==================== SERVICES ==================== -->
+    <section class="section section--white" id="services">
+      <div class="container">
+        <div class="about-head">
+          <span class="eyebrow">Services</span>
+          <h2 class="section-title">A clean for every space.</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">From routine home cleaning to post-construction cleanups, we cover the full range of cleaning needs across Toronto and the GTA.</p>
+        </div>
 
-      <div class="pricing-grid">
+        <div class="services-grid">
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            </div>
+            <h3>Residential Cleaning</h3>
+            <p>Routine and one-time cleans for homes, condos, and apartments.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
 
-        <div class="pricing-card">
-          <div class="pricing-head">
-            <h4>Essential Package</h4>
-          </div>
-          <div class="pricing-body">
-            <ul>
-              <li>Dusting all surfaces</li>
-              <li>Vacuuming carpets and rugs</li>
-              <li>Mopping floors</li>
-              <li>Cleaning countertops and surfaces</li>
-              <li>Cleaning mirrors and glass</li>
-              <li>Emptying trash bins</li>
-              <li>Basic bathroom cleaning tasks</li>
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+            </div>
+            <h3>Commercial Cleaning</h3>
+            <p>Offices, retail spaces, and small business cleaning kept consistent.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+            </div>
+            <h3>Move In &amp; Out Cleaning</h3>
+            <p>Detailed cleans for tenants, landlords, and new homeowners.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.07 4.93l-1.41 1.41C19.1 7.79 20 9.79 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8c0-4.08 3.05-7.44 7-7.93V6.5l4-4-4-4v2.05C5.05 1.06 1 6.08 1 12c0 6.08 4.92 11 11 11s11-4.92 11-11c0-3.03-1.23-5.79-3.21-7.77z"/></svg>
+            </div>
+            <h3>Deep Cleaning</h3>
+            <p>A top-to-bottom refresh that goes well beyond regular cleaning.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2.05V4.05C17.39 4.59 20.5 8.58 19.96 12.97 19.5 16.61 16.64 19.5 13 19.93V21.93C18.5 21.38 22.5 16.5 21.95 11 21.5 6.25 17.73 2.5 13 2.05M11 2.06C9.05 2.25 7.19 3 5.67 4.26L7.1 5.74C8.22 4.84 9.57 4.26 11 4.06V2.06M4.26 5.67C3 7.19 2.25 9.04 2.05 11H4.05C4.24 9.58 4.8 8.23 5.69 7.1L4.26 5.67M2.06 13C2.26 14.96 3.03 16.81 4.27 18.33L5.69 16.9C4.81 15.77 4.24 14.42 4.06 13H2.06M7.1 18.37 5.67 19.74C7.18 21 9.04 21.79 11 22V20C9.58 19.82 8.23 19.25 7.1 18.37M12 7L8 11H11V17H13V11H16L12 7Z"/></svg>
+            </div>
+            <h3>Renovation Cleaning</h3>
+            <p>Dust and debris removal during and after home renovations.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+            <h3>Post-Construction Cleaning</h3>
+            <p>Final cleanups for new builds and major remodel projects.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+            </div>
+            <h3>Carpet Cleaning</h3>
+            <p>Refresh carpets, rugs, and upholstery for a like-new feel.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+            </div>
+            <h3>AirBnB Cleaning</h3>
+            <p>Fast, reliable turnover cleans between guest stays.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="#booking" class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zm-6 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm4 4h-2v-2h2v2zm0-4h-2V9h2v2z"/></svg>
+            </div>
+            <h3>Building Cleaning</h3>
+            <p>Hallways, lobbies, and common areas for condos and rentals.</p>
+            <span class="service-card__cta">Request a quote <span class="service-card__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="about-head">
+          <span class="eyebrow">Packages</span>
+          <h2 class="section-title">Pick the right package.</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">Three flexible options for any space. Every package is fully customizable to fit your home or business — just tell us what you need.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <article class="pricing-card">
+            <div>
+              <span class="pricing-card__tag">Routine upkeep</span>
+              <h3 class="pricing-card__title">Essential</h3>
+              <p class="pricing-card__sub">Reliable maintenance cleaning for everyday spaces.</p>
+            </div>
+            <ul class="pricing-card__list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Dusting all surfaces</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Vacuuming carpets and rugs</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Mopping all floors</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Wiping countertops &amp; surfaces</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cleaning mirrors and glass</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Emptying trash bins</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Basic bathroom cleaning</li>
             </ul>
-            <a href="#booking" class="btn btn-primary">Book now</a>
-          </div>
-        </div>
+            <a href="#booking" class="btn btn--outline btn--block">Book Essential</a>
+          </article>
 
-        <div class="pricing-card featured">
-          <div class="pricing-head">
-            <h4>Deluxe Package</h4>
-          </div>
-          <div class="pricing-body">
-            <ul>
-              <li>All services in the Essential Package</li>
-              <li>Detailed carpet and upholstery</li>
-              <li>Deep-cleaning bathrooms</li>
-              <li>Cleaning kitchen appliances</li>
-              <li>Wiping down baseboards and trim</li>
-              <li>Light fixture and ceiling fan dusting</li>
-              <li>Window cleaning (interior)</li>
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Most Popular</span>
+            <div>
+              <span class="pricing-card__tag">Best all-rounder</span>
+              <h3 class="pricing-card__title">Deluxe</h3>
+              <p class="pricing-card__sub">Our most-requested cleaning package for busy households.</p>
+            </div>
+            <ul class="pricing-card__list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Everything in Essential</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Detailed carpet &amp; upholstery</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Deep-cleaning bathrooms</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cleaning kitchen appliances</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Wiping baseboards &amp; trim</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Light fixture &amp; fan dusting</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Interior window cleaning</li>
             </ul>
-            <a href="#booking" class="btn btn-primary">Book now</a>
-          </div>
-        </div>
+            <a href="#booking" class="btn btn--primary btn--block">Book Deluxe</a>
+          </article>
 
-        <div class="pricing-card">
-          <div class="pricing-head">
-            <h4>Premium Package</h4>
-          </div>
-          <div class="pricing-body">
-            <ul>
-              <li>All services in the Deluxe Package</li>
-              <li>Deep-cleaning of kitchen appliances</li>
-              <li>Interior and exterior windows</li>
-              <li>Cleaning hard-to-reach areas</li>
-              <li>Sanitizing high-touch areas</li>
-              <li>Post-construction or move-in</li>
-              <li>Extra attention to high-traffic</li>
+          <article class="pricing-card">
+            <div>
+              <span class="pricing-card__tag">Top-to-bottom</span>
+              <h3 class="pricing-card__title">Premium</h3>
+              <p class="pricing-card__sub">Our most thorough package — for move-ins, deep refreshes, and post-construction.</p>
+            </div>
+            <ul class="pricing-card__list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Everything in Deluxe</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Deep-cleaning kitchen appliances</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Interior &amp; exterior windows</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Hard-to-reach areas</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Sanitizing high-touch surfaces</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Post-construction or move-in</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Extra attention to high-traffic</li>
             </ul>
-            <a href="#booking" class="btn btn-primary">Book now</a>
-          </div>
-        </div>
+            <a href="#booking" class="btn btn--outline btn--block">Book Premium</a>
+          </article>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== TESTIMONIALS SECTION ==================== -->
-  <section class="section section-white" id="testimonials">
-    <div class="container">
-      <h2 class="section-title">What clients say</h2>
-      <div class="section-divider"></div>
-      <p class="section-intro">Client satisfaction is our top priority, and it shows in the positive feedback we receive. Our clients consistently express their happiness with the quality of our services, praising our attention to detail, reliability, and professional approach. Whether we're cleaning homes, businesses, or rental properties, our clients trust us to deliver exceptional results every time. We're proud to have built lasting relationships with satisfied customers who appreciate our commitment to their needs. Your satisfaction is not just our goal—it's our guarantee.</p>
-
-      <div class="testimonials-slider" id="testimonialsSlider">
-        <div class="testimonials-track" id="testimonialsTrack">
-
-          <div class="testimonial-card">
-            <img src="assets/user.png" alt="Milad M" class="testimonial-avatar">
-            <p class="testimonial-text">"Moving into a new home is stressful, but Intershine made it so much easier with their move-in cleaning service. The house was spotless and ready for us to move in. Their team was professional and thorough, making our transition smooth and pleasant."</p>
-            <h3 class="testimonial-name">Milad M</h3>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="assets/user.png" alt="Mark T" class="testimonial-avatar">
-            <p class="testimonial-text">"After a major renovation, we hired Intershine for post-construction cleaning, and they did an outstanding job. They tackled the dust and debris with such efficiency, leaving our space ready for use. Their attention to detail and thoroughness were impressive."</p>
-            <h3 class="testimonial-name">Mark T</h3>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="assets/user.png" alt="Morteza N" class="testimonial-avatar">
-            <p class="testimonial-text">"We've been using Intershine for our office cleaning, and the results have been fantastic. Our workspace is always spotless, and their team is incredibly reliable. It's made a huge difference in our office environment. I can't recommend them enough!"</p>
-            <h3 class="testimonial-name">Morteza N</h3>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="assets/user.png" alt="Ali M" class="testimonial-avatar">
-            <p class="testimonial-text">"The team from Intershine did an incredible job with our home. From the thorough dusting to the perfectly clean floors, their work exceeded my expectations. Their professionalism and reliability make them my go-to cleaning service."</p>
-            <h3 class="testimonial-name">Ali M</h3>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="assets/user.png" alt="Sarah L" class="testimonial-avatar">
-            <p class="testimonial-text">"I couldn't be happier with the cleaning services from Intershine. My home looks immaculate every time they visit. They pay attention to the smallest details and always leave my place sparkling clean. I highly recommend them to anyone looking for top-notch residential cleaning."</p>
-            <h3 class="testimonial-name">Sarah L</h3>
-          </div>
-
-        </div>
-
-        <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous testimonial">&#8249;</button>
-        <button class="slider-btn next-btn" id="nextBtn" aria-label="Next testimonial">&#8250;</button>
-
-        <div class="slider-dots" id="sliderDots">
-          <span class="dot active" data-index="0"></span>
-          <span class="dot" data-index="1"></span>
-          <span class="dot" data-index="2"></span>
-          <span class="dot" data-index="3"></span>
-          <span class="dot" data-index="4"></span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== BOOKING SECTION ==================== -->
-  <section class="section section-light" id="booking">
-    <div class="container">
-      <h2 class="section-title">Booking</h2>
-      <div class="section-divider"></div>
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section section--white" id="testimonials">
+      <div class="container">
+        <div class="about-head">
+          <span class="eyebrow">Reviews</span>
+          <h2 class="section-title">What clients say.</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">Real feedback from clients across Toronto and the GTA. Your satisfaction is what we work for.</p>
+        </div>
 
-      <div class="booking-form-wrapper">
-        <form class="booking-form" id="bookingForm" action="../api.php" method="POST" novalidate>
+        <div class="testimonials-slider" id="testimonialsSlider">
+          <div class="testimonials-track" id="testimonialsTrack">
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="service">Service / Package</label>
-              <select id="service" name="service" required>
-                <option value="" disabled selected>Select a service or package</option>
-                <optgroup label="Packages">
-                  <option>Essential Package</option>
-                  <option>Deluxe Package</option>
-                  <option>Premium Package</option>
-                </optgroup>
-                <optgroup label="Services">
-                  <option>Residential Cleaning</option>
-                  <option>Commercial Cleaning</option>
-                  <option>Move In &amp; Out Cleaning</option>
-                  <option>Deep Cleaning</option>
-                  <option>Renovation Cleaning</option>
-                  <option>Post-Construction Cleaning</option>
-                  <option>Carpet Cleaning</option>
-                  <option>AirBnB Cleaning</option>
-                  <option>Building Cleaning</option>
-                </optgroup>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="area">Cleaning Area (sq ft)</label>
-              <input type="text" id="area" name="area" placeholder="e.g. 1200">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="date">Preferred Date</label>
-              <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-              <label>Preferred Days</label>
-              <div class="checkbox-group">
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Monday"> Monday</label>
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Tuesday"> Tuesday</label>
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Wednesday"> Wednesday</label>
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Thursday"> Thursday</label>
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Friday"> Friday</label>
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Saturday"> Saturday</label>
-                <label class="checkbox-label"><input type="checkbox" name="days" value="Sunday"> Sunday</label>
+            <div class="testimonial-card">
+              <div class="testimonial-card__inner">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">"Moving into a new home is stressful, but Intershine made it so much easier with their move-in cleaning service. The house was spotless and ready for us. Their team was professional and thorough."</p>
+                <div class="testimonial-author">
+                  <img src="assets/user.png" alt="" loading="lazy" decoding="async" width="44" height="44" class="testimonial-avatar">
+                  <div>
+                    <h3 class="testimonial-name">Milad M</h3>
+                    <span class="testimonial-meta">Move-In Cleaning · Toronto</span>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-card__inner">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">"After a major renovation, we hired Intershine for post-construction cleaning. They tackled the dust and debris with such efficiency, leaving our space ready for use. Their attention to detail was impressive."</p>
+                <div class="testimonial-author">
+                  <img src="assets/user.png" alt="" loading="lazy" decoding="async" width="44" height="44" class="testimonial-avatar">
+                  <div>
+                    <h3 class="testimonial-name">Mark T</h3>
+                    <span class="testimonial-meta">Post-Construction · GTA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-card__inner">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">"We've been using Intershine for our office cleaning, and the results have been fantastic. Our workspace is always spotless, and their team is incredibly reliable. It's made a real difference in our office."</p>
+                <div class="testimonial-author">
+                  <img src="assets/user.png" alt="" loading="lazy" decoding="async" width="44" height="44" class="testimonial-avatar">
+                  <div>
+                    <h3 class="testimonial-name">Morteza N</h3>
+                    <span class="testimonial-meta">Commercial Cleaning · Toronto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-card__inner">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">"From the thorough dusting to the perfectly clean floors, their work exceeded my expectations. Their professionalism and reliability make them my go-to cleaning service."</p>
+                <div class="testimonial-author">
+                  <img src="assets/user.png" alt="" loading="lazy" decoding="async" width="44" height="44" class="testimonial-avatar">
+                  <div>
+                    <h3 class="testimonial-name">Ali M</h3>
+                    <span class="testimonial-meta">Residential Cleaning · GTA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-card__inner">
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-text">"My home looks immaculate every time they visit. They pay attention to the smallest details and always leave my place sparkling clean. Highly recommend for residential cleaning."</p>
+                <div class="testimonial-author">
+                  <img src="assets/user.png" alt="" loading="lazy" decoding="async" width="44" height="44" class="testimonial-avatar">
+                  <div>
+                    <h3 class="testimonial-name">Sarah L</h3>
+                    <span class="testimonial-meta">Residential Cleaning · Toronto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="company">Company (optional)</label>
-              <input type="text" id="company" name="company" placeholder="Company name">
-            </div>
-            <div class="form-group">
-              <label for="contact">Contact Person *</label>
-              <input type="text" id="contact" name="contact" placeholder="Your full name" required>
-            </div>
-          </div>
+          <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous testimonial">‹</button>
+          <button class="slider-btn next-btn" id="nextBtn" aria-label="Next testimonial">›</button>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="street">Street Address *</label>
-              <input type="text" id="street" name="street" placeholder="Street address" required>
-            </div>
-            <div class="form-group">
-              <label for="postcode">Postcode / Town *</label>
-              <input type="text" id="postcode" name="postcode" placeholder="Postcode / Town" required>
-            </div>
+          <div class="slider-dots" id="sliderDots" aria-label="Testimonial pagination">
+            <button class="dot active" data-index="0" aria-label="Show testimonial 1"></button>
+            <button class="dot" data-index="1" aria-label="Show testimonial 2"></button>
+            <button class="dot" data-index="2" aria-label="Show testimonial 3"></button>
+            <button class="dot" data-index="3" aria-label="Show testimonial 4"></button>
+            <button class="dot" data-index="4" aria-label="Show testimonial 5"></button>
           </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone *</label>
-              <input type="tel" id="phone" name="phone" placeholder="+1 (xxx) xxx-xxxx" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Additional details or special requirements..."></textarea>
-          </div>
-
-          <div class="form-submit">
-            <button type="submit" class="btn btn-primary btn-large">Send Booking Request</button>
-          </div>
-
-          <div id="formMessage" class="form-message" style="display:none;"></div>
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOOTER / CONTACT SECTION ==================== -->
+    <!-- ==================== CTA BANNER ==================== -->
+    <section class="cta-banner" aria-labelledby="cta-banner-title">
+      <div class="cta-banner__inner container">
+        <div>
+          <h2 id="cta-banner-title">Ready for a spotless space?</h2>
+          <p>Get a free quote today — we usually reply within hours.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="#booking" class="btn btn--white btn--lg">Get a Free Quote</a>
+          <a href="tel:+16478353937" class="btn btn--ghost btn--lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOOKING ==================== -->
+    <section class="section" id="booking">
+      <div class="container">
+        <div class="booking-grid">
+
+          <div class="booking-info">
+            <span class="eyebrow">Booking</span>
+            <h2 class="section-title section-title--left">Request your free quote.</h2>
+            <p class="section-intro section-intro--left">Tell us a little about your space and we'll get back to you with availability and pricing — typically within 24 hours.</p>
+
+            <ul class="booking-bullets">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Toronto &amp; GTA service area
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Reply within 24 hours
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                No-pressure quote, flexible scheduling
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Transparent pricing — no hidden fees
+              </li>
+            </ul>
+
+            <div class="booking-direct">
+              <p>Prefer to talk?</p>
+              <a href="tel:+16478353937" class="btn btn--ghost-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call (647) 835-3937
+              </a>
+            </div>
+          </div>
+
+          <div class="booking-form-wrapper">
+            <form class="booking-form" id="bookingForm" action="/api/booking" method="POST" novalidate>
+
+              <!-- Honeypot field — must remain empty. Hidden from real users. -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="service">Service / Package *</label>
+                  <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service or package</option>
+                    <optgroup label="Packages">
+                      <option>Essential Package</option>
+                      <option>Deluxe Package</option>
+                      <option>Premium Package</option>
+                    </optgroup>
+                    <optgroup label="Services">
+                      <option>Residential Cleaning</option>
+                      <option>Commercial Cleaning</option>
+                      <option>Move In &amp; Out Cleaning</option>
+                      <option>Deep Cleaning</option>
+                      <option>Renovation Cleaning</option>
+                      <option>Post-Construction Cleaning</option>
+                      <option>Carpet Cleaning</option>
+                      <option>AirBnB Cleaning</option>
+                      <option>Building Cleaning</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="area">Cleaning Area (sq ft)</label>
+                  <input type="text" id="area" name="area" placeholder="e.g. 1200" inputmode="numeric">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date">Preferred Date</label>
+                  <input type="date" id="date" name="date">
+                </div>
+                <div class="form-group">
+                  <label>Preferred Days</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Monday"> Mon</label>
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Tuesday"> Tue</label>
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Wednesday"> Wed</label>
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Thursday"> Thu</label>
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Friday"> Fri</label>
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Saturday"> Sat</label>
+                    <label class="checkbox-label"><input type="checkbox" name="days" value="Sunday"> Sun</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company">Company (optional)</label>
+                  <input type="text" id="company" name="company" placeholder="Company name" autocomplete="organization">
+                </div>
+                <div class="form-group">
+                  <label for="contact">Contact Person *</label>
+                  <input type="text" id="contact" name="contact" placeholder="Your full name" required autocomplete="name">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="street">Street Address *</label>
+                  <input type="text" id="street" name="street" placeholder="Street address" required autocomplete="street-address">
+                </div>
+                <div class="form-group">
+                  <label for="postcode">Postcode / Town *</label>
+                  <input type="text" id="postcode" name="postcode" placeholder="Postcode / Town" required autocomplete="postal-code">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+1 (xxx) xxx-xxxx" required autocomplete="tel">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us a little more about your space — number of rooms, special requirements, etc."></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn--primary btn--lg">Send Booking Request</button>
+              </div>
+
+              <div id="formMessage" class="form-message" style="display:none;" role="alert"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer" id="contact">
     <div class="footer-inner">
 
-      <div class="footer-col">
-        <div class="footer-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+      <div class="footer-col footer-brand">
+        <img src="assets/logo.png" alt="Intershine" width="140" height="42">
+        <p class="footer-tagline">Professional residential and commercial cleaning across Toronto and the Greater Toronto Area.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/intershine_inc?igsh=MW1uc2lwdjN6emE5Mw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
         </div>
-        <h3>Navigation</h3>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigate</h3>
         <ul class="footer-nav">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About us</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Packages</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#booking">Booking</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-center">
-        <a href="#home" class="footer-logo">
-          <img src="assets/logo.png" alt="Intershine Logo">
-        </a>
-        <p class="footer-tagline">Expert Cleaning You Can Trust—Quality Service, Fair Pricing, Every Time.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/intershine_inc?igsh=MW1uc2lwdjN6emE5Mw==" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/></svg>
-          </a>
-        </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-nav">
+          <li><a href="#services">Residential</a></li>
+          <li><a href="#services">Commercial</a></li>
+          <li><a href="#services">Move In/Out</a></li>
+          <li><a href="#services">Deep Cleaning</a></li>
+          <li><a href="#services">Post-Construction</a></li>
+          <li><a href="#services">AirBnB Turnover</a></li>
+        </ul>
       </div>
 
       <div class="footer-col">
-        <div class="footer-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-        </div>
         <h3>Get in touch</h3>
         <address class="footer-address">
-          <p>Toronto</p>
-          <p>GTA, Canada L4P</p>
-          <p>Phone: <a href="tel:+16478353937">+1 (647) 835-3937</a></p>
-          <p>Phone: <a href="tel:+16479363937">+1 (647) 936-3937</a></p>
-          <p>Email: <a href="mailto:info@intershine.ca">info@intershine.ca</a></p>
+          <div class="footer-line">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Toronto, GTA, Canada
+          </div>
+          <div class="footer-line">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:+16478353937">+1 (647) 835-3937</a>
+          </div>
+          <div class="footer-line">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:info@intershine.ca">info@intershine.ca</a>
+          </div>
         </address>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p>Copyright &copy; 2024 by miladweb.Com. All rights reserved.</p>
+      <p>&copy; <span id="year">2026</span> Intershine Cleaning Services. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- ==================== MOBILE STICKY CTA ==================== -->
+  <div class="mobile-cta" id="mobileCta" aria-label="Quick contact">
+    <a href="tel:+16478353937" class="btn btn--ghost-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      Call
+    </a>
+    <a href="#booking" class="btn btn--primary">Get a Free Quote</a>
+  </div>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
