@@ -620,4 +620,51 @@
   var yearEl = qs('#year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  // ============================================================
+  // FAQ — single-open accordion behavior
+  // (native <details> still works; this just closes others on open)
+  // ============================================================
+  var faqItems = qsa('.faq-item');
+  if (faqItems.length) {
+    faqItems.forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        if (!item.open) return;
+        faqItems.forEach(function (other) {
+          if (other !== item && other.open) other.open = false;
+        });
+      });
+    });
+  }
+
+  // ============================================================
+  // SUBTLE CARD TILT — desktop only, reduced-motion safe
+  // ============================================================
+  var prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var supportsHover =
+    window.matchMedia &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  if (!prefersReducedMotion && supportsHover) {
+    var tiltCards = qsa('.service-card, .feature-box, .pricing-card');
+    var TILT_MAX = 4; // degrees
+    tiltCards.forEach(function (card) {
+      card.style.transformStyle = 'preserve-3d';
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var px = (e.clientX - rect.left) / rect.width;
+        var py = (e.clientY - rect.top) / rect.height;
+        var rx = (py - 0.5) * -TILT_MAX;
+        var ry = (px - 0.5) * TILT_MAX;
+        card.style.transform =
+          'perspective(900px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' +
+          ry.toFixed(2) + 'deg) translateY(-5px)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
+  }
+
 })();
