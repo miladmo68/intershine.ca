@@ -91,6 +91,7 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: 96px;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
