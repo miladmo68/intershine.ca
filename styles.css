@@ -2138,7 +2138,7 @@ p:last-child { margin-bottom: 0; }
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transition: opacity .65s var(--ease), transform .65s var(--ease);
 }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
@@ -2147,7 +2147,7 @@ p:last-child { margin-bottom: 0; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Stagger */
+/* Stagger — grid groups */
 .feature-box.fade-in:nth-child(1) { transition-delay: 0s; }
 .feature-box.fade-in:nth-child(2) { transition-delay: .08s; }
 .feature-box.fade-in:nth-child(3) { transition-delay: .16s; }
@@ -2171,6 +2171,17 @@ p:last-child { margin-bottom: 0; }
 .pricing-card.fade-in:nth-child(1) { transition-delay: 0s; }
 .pricing-card.fade-in:nth-child(2) { transition-delay: .10s; }
 .pricing-card.fade-in:nth-child(3) { transition-delay: .20s; }
+
+/* Stagger — solo rows */
+.trust-item.fade-in:nth-child(1) { transition-delay: 0s; }
+.trust-item.fade-in:nth-child(2) { transition-delay: .07s; }
+.trust-item.fade-in:nth-child(3) { transition-delay: .14s; }
+.trust-item.fade-in:nth-child(4) { transition-delay: .21s; }
+
+.footer-col.fade-in:nth-child(1) { transition-delay: 0s; }
+.footer-col.fade-in:nth-child(2) { transition-delay: .07s; }
+.footer-col.fade-in:nth-child(3) { transition-delay: .14s; }
+.footer-col.fade-in:nth-child(4) { transition-delay: .21s; }
 
 /* ============================================================
    REDUCED MOTION

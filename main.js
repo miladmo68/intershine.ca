@@ -531,43 +531,73 @@
   }
 
   // ============================================================
-  // SCROLL-REVEAL ANIMATIONS (with group stagger)
+  // SCROLL-REVEAL ANIMATIONS
   // ============================================================
-  var animatedEls = qsa('.feature-box, .step-box, .service-card, .pricing-card');
 
-  animatedEls.forEach(function (el) {
-    el.classList.add('fade-in');
-  });
+  // Individual elements that animate one at a time
+  var soloSelectors = [
+    '.section-head',
+    '.trust-item',
+    '.testimonial-card',
+    '.faq-item',
+    '.cta-banner__inner',
+    '.booking-info',
+    '.booking-form-wrapper',
+    '.footer-col',
+    '.areas__head',
+    '.areas__chips'
+  ].join(', ');
 
-  // Track which parent groups have already been triggered
+  // Grid elements that stagger as a group
+  var groupSelectors = [
+    '.feature-box',
+    '.step-box',
+    '.service-card',
+    '.pricing-card'
+  ].join(', ');
+
+  var soloEls  = qsa(soloSelectors);
+  var groupEls = qsa(groupSelectors);
+
+  soloEls.forEach(function (el) { el.classList.add('fade-in'); });
+  groupEls.forEach(function (el) { el.classList.add('fade-in'); });
+
   var triggeredGroups = new WeakSet();
 
-  function checkAnimations() {
-    var viewBottom = window.scrollY + window.innerHeight;
-
-    qsa('.fade-in:not(.visible)').forEach(function (el) {
-      var top = el.getBoundingClientRect().top + window.scrollY;
-      if (top >= viewBottom - 80) return;
-
-      var parent = el.parentElement;
-      // If the element is in a grid group, trigger all siblings together
-      var siblings = parent ? parent.querySelectorAll('.fade-in') : null;
-
-      if (siblings && siblings.length > 1 && !triggeredGroups.has(parent)) {
+  function revealEl(el) {
+    var parent = el.parentElement;
+    var siblings = parent ? parent.querySelectorAll('.fade-in') : null;
+    if (siblings && siblings.length > 1) {
+      if (!triggeredGroups.has(parent)) {
         triggeredGroups.add(parent);
-        siblings.forEach(function (sib, i) {
-          // CSS nth-child delays handle the visual stagger
-          sib.classList.add('visible');
-        });
-      } else if (!parent || siblings.length <= 1) {
+        siblings.forEach(function (sib) { sib.classList.add('visible'); });
+      } else {
         el.classList.add('visible');
       }
-    });
+    } else {
+      el.classList.add('visible');
+    }
   }
 
-  window.addEventListener('scroll', checkAnimations, { passive: true });
-  window.addEventListener('resize', checkAnimations, { passive: true });
-  checkAnimations();
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          revealEl(entry.target);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    soloEls.forEach(function (el) { revealObserver.observe(el); });
+    groupEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    soloEls.forEach(function (el) { el.classList.add('visible'); });
+    groupEls.forEach(function (el) { el.classList.add('visible'); });
+  }
 
   // ============================================================
   // SCROLL TO TOP BUTTON
