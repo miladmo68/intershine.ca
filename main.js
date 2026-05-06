@@ -556,8 +556,12 @@
     '.pricing-card'
   ].join(', ');
 
-  var soloEls  = qsa(soloSelectors);
-  var groupEls = qsa(groupSelectors);
+  // Skip elements managed by AOS (data-aos) so the two systems don't fight
+  // over opacity/transform on the same element.
+  function notAos(el) { return !el.hasAttribute('data-aos'); }
+
+  var soloEls  = Array.prototype.filter.call(qsa(soloSelectors),  notAos);
+  var groupEls = Array.prototype.filter.call(qsa(groupSelectors), notAos);
 
   soloEls.forEach(function (el) { el.classList.add('fade-in'); });
   groupEls.forEach(function (el) { el.classList.add('fade-in'); });
