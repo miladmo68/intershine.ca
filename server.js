@@ -13,8 +13,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
-const MAIL_TO = process.env.MAIL_TO || 'info@intershine.ca';
-const MAIL_FROM = process.env.MAIL_FROM || 'no-reply@intershine.ca';
+const MAIL_TO = process.env.MAIL_TO || process.env.TO_EMAIL || 'info@intershine.ca';
+// Gmail (and most SMTP providers) require the From address to match the
+// authenticated account, so fall back to SMTP_USER rather than an unverified alias.
+const MAIL_FROM = process.env.MAIL_FROM || process.env.SMTP_USER || 'no-reply@intershine.ca';
 
 app.set('trust proxy', 1);
 
@@ -45,7 +47,12 @@ function getTransporter() {
 
   const host = process.env.SMTP_HOST;
   const port = parseInt(process.env.SMTP_PORT || '587', 10);
-  const secure = String(process.env.SMTP_SECURE || 'false').toLowerCase() === 'true';
+  // If SMTP_SECURE isn't set, derive it from the port: 465 uses implicit TLS
+  // (secure=true) while 587/25 use STARTTLS (secure=false). This prevents the
+  // common "port 465 with secure=false" hang on Gmail.
+  const secure = process.env.SMTP_SECURE
+    ? String(process.env.SMTP_SECURE).toLowerCase() === 'true'
+    : port === 465;
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
 
