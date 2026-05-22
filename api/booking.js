@@ -1,8 +1,8 @@
 'use strict';
 
-// Vercel Serverless Function — handles POST /api/booking.
+// Serverless function — handles POST /api/booking.
 // Mirrors the Express handler in server.js so the booking form works in
-// production on Vercel (which does NOT run the long-lived Express server).
+// production hosting that does not run the long-lived Express server.
 
 const nodemailer = require('nodemailer');
 const validator = require('validator');
@@ -93,7 +93,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    // Vercel parses JSON bodies automatically, but guard against string bodies.
+    // The host parses JSON bodies automatically, but guard against string bodies.
     let body = req.body || {};
     if (typeof body === 'string') {
       try { body = JSON.parse(body); } catch { body = {}; }
